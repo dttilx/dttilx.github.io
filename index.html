@@ -39,124 +39,130 @@
           <a href="#harness-decoder">HarnessDecoder</a>
           <a href="#poker-demo">pokerDemo</a>
         </div>
+      </section>
 
-        <div class="project-grid">
-          <article class="project-card" id="raft-kv">
-            <div class="card-topline">
-              <span>01</span>
-              <a href="https://github.com/dttilx/raftKvstorage" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>raftKvstorage</h3>
-            <div class="card-block">
-              <h4>项目内容</h4>
-              <p>基于 Raft 共识算法实现的分布式 KV 存储项目，围绕节点协作、日志复制、客户端请求和底层存储结构展开。</p>
-            </div>
-            <div class="card-block">
-              <h4>实现功能</h4>
-              <p>Leader 选举、日志复制、状态机应用、KVServer、客户端 Clerk、持久化组件、gRPC/protobuf 通信、SkipList 存储。</p>
-            </div>
-            <div class="card-block">
-              <h4>技术栈</h4>
-              <ul class="tags">
-                <li>C++</li>
-                <li>Raft</li>
-                <li>gRPC</li>
-                <li>protobuf</li>
-                <li>CMake</li>
-                <li>多线程</li>
-                <li>持久化</li>
-                <li>SkipList</li>
-                <li>Linux</li>
-              </ul>
-            </div>
-          </article>
+      <section class="project-section reveal" id="raft-kv">
+        <article class="project-card">
+          <div class="card-topline">
+            <span>01</span>
+            <a href="https://github.com/dttilx/raftKvstorage" target="_blank" rel="noreferrer">源码</a>
+          </div>
+          <h3>raftKvstorage</h3>
+          <div class="card-block">
+            <h4>项目内容</h4>
+            <p>基于 Raft 共识算法实现的分布式 KV 存储项目，围绕节点协作、日志复制、客户端请求和底层存储结构展开。</p>
+          </div>
+          <div class="card-block">
+            <h4>实现功能</h4>
+            <p>Leader 选举、日志复制、状态机应用、KVServer、客户端 Clerk、持久化组件、gRPC/protobuf 通信、SkipList 存储。</p>
+          </div>
+          <div class="card-block">
+            <h4>技术栈</h4>
+            <ul class="tags">
+              <li>C++</li>
+              <li>Raft</li>
+              <li>gRPC</li>
+              <li>protobuf</li>
+              <li>CMake</li>
+              <li>多线程</li>
+              <li>持久化</li>
+              <li>SkipList</li>
+              <li>Linux</li>
+            </ul>
+          </div>
+        </article>
+      </section>
 
-          <article class="project-card" id="ai-network">
-            <div class="card-topline">
-              <span>02</span>
-              <span>整理中</span>
-            </div>
-            <h3>AI 弱网智能检测</h3>
-            <div class="card-block">
-              <h4>项目内容</h4>
-              <p>面向弱网场景的网络质量检测项目，针对延迟、丢包、抖动、连接失败等情况生成可分析的检测结果。</p>
-            </div>
-            <div class="card-block">
-              <h4>实现功能</h4>
-              <p>网络指标采集、弱网状态识别、异常分析、检测分级、结果报告生成，并预留 AI 辅助判断能力。</p>
-            </div>
-            <div class="card-block">
-              <h4>技术栈</h4>
-              <ul class="tags">
-                <li>Python</li>
-                <li>网络检测</li>
-                <li>异常分析</li>
-                <li>数据清洗</li>
-                <li>自动化脚本</li>
-                <li>报告生成</li>
-                <li>AI 辅助判断</li>
-              </ul>
-            </div>
-          </article>
+      <section class="project-section reveal" id="ai-network">
+        <article class="project-card">
+          <div class="card-topline">
+            <span>02</span>
+            <span>整理中</span>
+          </div>
+          <h3>AI 弱网智能检测</h3>
+          <div class="card-block">
+            <h4>项目内容</h4>
+            <p>面向弱网场景的网络质量检测项目，针对延迟、丢包、抖动、连接失败等情况生成可分析的检测结果。</p>
+          </div>
+          <div class="card-block">
+            <h4>实现功能</h4>
+            <p>网络指标采集、弱网状态识别、异常分析、检测分级、结果报告生成，并预留 AI 辅助判断能力。</p>
+          </div>
+          <div class="card-block">
+            <h4>技术栈</h4>
+            <ul class="tags">
+              <li>Python</li>
+              <li>网络检测</li>
+              <li>异常分析</li>
+              <li>数据清洗</li>
+              <li>自动化脚本</li>
+              <li>报告生成</li>
+              <li>AI 辅助判断</li>
+            </ul>
+          </div>
+        </article>
+      </section>
 
-          <article class="project-card" id="harness-decoder">
-            <div class="card-topline">
-              <span>03</span>
-              <a href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>IntelligentHarnessDecoder</h3>
-            <div class="card-block">
-              <h4>项目内容</h4>
-              <p>汽车线束图和电路图 PDF 智能解析工具，用于从图纸中提取元器件、连接器、端子等名称并导出结构化结果。</p>
-            </div>
-            <div class="card-block">
-              <h4>实现功能</h4>
-              <p>PDF 渲染、图像预处理、OCR 识别、候选名称抽取、候选评分、AI 视觉审核、TXT/CSV/Excel 导出。项目在 Cursor 和 Codex 辅助下两天内完成。</p>
-            </div>
-            <div class="card-block">
-              <h4>技术栈</h4>
-              <ul class="tags">
-                <li>Python</li>
-                <li>OCR</li>
-                <li>PDF 解析</li>
-                <li>图像预处理</li>
-                <li>AI Vision</li>
-                <li>Excel 导出</li>
-                <li>Cursor</li>
-                <li>Codex</li>
-              </ul>
-            </div>
-          </article>
+      <section class="project-section reveal" id="harness-decoder">
+        <article class="project-card">
+          <div class="card-topline">
+            <span>03</span>
+            <a href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">源码</a>
+          </div>
+          <h3>IntelligentHarnessDecoder</h3>
+          <div class="card-block">
+            <h4>项目内容</h4>
+            <p>汽车线束图和电路图 PDF 智能解析工具，用于从图纸中提取元器件、连接器、端子等名称并导出结构化结果。</p>
+          </div>
+          <div class="card-block">
+            <h4>实现功能</h4>
+            <p>PDF 渲染、图像预处理、OCR 识别、候选名称抽取、候选评分、AI 视觉审核、TXT/CSV/Excel 导出。项目在 Cursor 和 Codex 辅助下两天内完成。</p>
+          </div>
+          <div class="card-block">
+            <h4>技术栈</h4>
+            <ul class="tags">
+              <li>Python</li>
+              <li>OCR</li>
+              <li>PDF 解析</li>
+              <li>图像预处理</li>
+              <li>AI Vision</li>
+              <li>Excel 导出</li>
+              <li>Cursor</li>
+              <li>Codex</li>
+            </ul>
+          </div>
+        </article>
+      </section>
 
-          <article class="project-card" id="poker-demo">
-            <div class="card-topline">
-              <span>04</span>
-              <a href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>pokerDemo</h3>
-            <div class="card-block">
-              <h4>项目内容</h4>
-              <p>基于 C++ 的扑克交互 Demo，用于练习卡牌模型、状态管理、配置驱动和界面交互。</p>
-            </div>
-            <div class="card-block">
-              <h4>实现功能</h4>
-              <p>卡牌模型、关卡配置、桌面牌与手牌匹配、卡牌移动和替换、撤回记录、状态恢复、Cocos 资源组织。项目在 Cursor 和 Codex 辅助下两天内完成。</p>
-            </div>
-            <div class="card-block">
-              <h4>技术栈</h4>
-              <ul class="tags">
-                <li>C++</li>
-                <li>Cocos</li>
-                <li>UI 交互</li>
-                <li>状态管理</li>
-                <li>资源管理</li>
-                <li>配置驱动</li>
-                <li>Cursor</li>
-                <li>Codex</li>
-              </ul>
-            </div>
-          </article>
-        </div>
+      <section class="project-section reveal" id="poker-demo">
+        <article class="project-card">
+          <div class="card-topline">
+            <span>04</span>
+            <a href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">源码</a>
+          </div>
+          <h3>pokerDemo</h3>
+          <div class="card-block">
+            <h4>项目内容</h4>
+            <p>基于 C++ 的扑克交互 Demo，用于练习卡牌模型、状态管理、配置驱动和界面交互。</p>
+          </div>
+          <div class="card-block">
+            <h4>实现功能</h4>
+            <p>卡牌模型、关卡配置、桌面牌与手牌匹配、卡牌移动和替换、撤回记录、状态恢复、Cocos 资源组织。项目在 Cursor 和 Codex 辅助下两天内完成。</p>
+          </div>
+          <div class="card-block">
+            <h4>技术栈</h4>
+            <ul class="tags">
+              <li>C++</li>
+              <li>Cocos</li>
+              <li>UI 交互</li>
+              <li>状态管理</li>
+              <li>资源管理</li>
+              <li>配置驱动</li>
+              <li>Cursor</li>
+              <li>Codex</li>
+            </ul>
+          </div>
+        </article>
       </section>
 
       <section class="section reveal" id="skills">
