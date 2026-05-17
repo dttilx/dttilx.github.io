@@ -7,7 +7,7 @@
       name="description"
       content="dttilx 的个人作品集，展示 C++、Linux 网络编程、分布式系统、后端工程与 AI 辅助开发项目。"
     />
-    <title>dttilx | Systems Portfolio</title>
+    <title>dttilx | Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -15,364 +15,221 @@
       <nav class="nav">
         <a class="brand" href="#top">dttilx</a>
         <div class="nav-links" aria-label="页面导航">
-          <a href="#projects">Projects</a>
-          <a href="#workflow">Engineering</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+          <a href="#projects">项目</a>
+          <a href="#skills">技术</a>
+          <a href="#contact">联系</a>
         </div>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero reveal">
-        <div class="hero-copy">
+      <section class="hero">
+        <div class="name-wrap">
           <p class="eyebrow">C++ / Linux Network / Distributed Systems</p>
-          <h1>偏底层、偏网络，也把工程做成能跑起来的系统。</h1>
+          <h1>dttilx</h1>
           <p class="intro">
-            我主要关注 C++ 后端、Linux 网络编程、RPC 通信、分布式一致性和系统工程实践。AI Coding 是我的提效工具，但作品集的主线仍然是底层能力、网络能力和工程落地能力。
+            关注 C++ 后端、Linux 网络编程、RPC 通信、分布式一致性和系统工程实践；也会使用 AI 工具提升开发效率。
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projects">查看项目路径</a>
-            <a class="button secondary" href="https://github.com/dttilx" target="_blank" rel="noreferrer">GitHub</a>
-          </div>
+        </div>
+        <a class="scroll-link" href="#projects">查看项目</a>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>项目作品</h2>
         </div>
 
-        <aside class="hero-console" aria-label="系统工程能力概览">
-          <div class="console-bar">
-            <span></span>
-            <span></span>
-            <span></span>
-            <strong>systems.trace</strong>
-          </div>
-          <div class="console-body">
-            <p><span>$</span> inspect stack</p>
-            <strong>C++ backend systems</strong>
-            <p><span>$</span> trace modules</p>
-            <ul>
-              <li>raft consensus</li>
-              <li>grpc transport</li>
-              <li>linux network I/O</li>
-            </ul>
-            <p><span>$</span> project surface</p>
-            <div class="mini-board">
-              <div>Raft KV</div>
-              <div>Network</div>
-              <div>AI Assist</div>
-              <div>C++ Demo</div>
+        <article class="project reveal" id="raft-kv">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-title">
+              <p class="eyebrow">C++ / Distributed System</p>
+              <h3>raftKvstorage</h3>
+              <p>
+                基于 Raft 思想实现的分布式 KV 存储项目，重点展示 C++ 后端、RPC 通信、分布式一致性和存储结构设计能力。
+              </p>
+            </div>
+            <div class="project-content">
+              <div>
+                <h4>实现功能</h4>
+                <ul>
+                  <li>Raft Leader 选举与任期管理</li>
+                  <li>日志复制、提交与状态机应用</li>
+                  <li>KVServer 与客户端 Clerk</li>
+                  <li>Persister 持久化组件</li>
+                  <li>gRPC / protobuf 通信接口</li>
+                  <li>SkipList 底层存储结构</li>
+                </ul>
+              </div>
+              <div>
+                <h4>技术栈</h4>
+                <ul class="tags">
+                  <li>C++</li>
+                  <li>Raft</li>
+                  <li>gRPC</li>
+                  <li>protobuf</li>
+                  <li>CMake</li>
+                  <li>多线程</li>
+                  <li>持久化</li>
+                  <li>SkipList</li>
+                  <li>Linux</li>
+                </ul>
+                <a class="text-link" href="https://github.com/dttilx/raftKvstorage" target="_blank" rel="noreferrer">
+                  查看源码
+                </a>
+              </div>
             </div>
           </div>
-        </aside>
+        </article>
+
+        <article class="project reveal" id="ai-network">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-title">
+              <p class="eyebrow">Network Diagnosis / AI Assist</p>
+              <h3>AI 弱网智能检测</h3>
+              <p>
+                面向延迟、丢包、抖动、连接失败等弱网场景，将网络检测指标整理成可分析报告，并使用 AI 辅助异常判断。
+              </p>
+            </div>
+            <div class="project-content">
+              <div>
+                <h4>实现功能</h4>
+                <ul>
+                  <li>采集并整理网络质量指标</li>
+                  <li>识别弱网、延迟、丢包和抖动异常</li>
+                  <li>输出检测分级和问题归因辅助</li>
+                  <li>生成检测报告，便于后续复盘</li>
+                  <li>为规则判断和 AI 分析预留扩展接口</li>
+                </ul>
+              </div>
+              <div>
+                <h4>技术栈</h4>
+                <ul class="tags">
+                  <li>Python</li>
+                  <li>网络检测</li>
+                  <li>异常分析</li>
+                  <li>数据清洗</li>
+                  <li>自动化脚本</li>
+                  <li>报告生成</li>
+                  <li>AI 辅助判断</li>
+                </ul>
+                <p class="muted">本地项目，案例整理中。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal" id="harness-decoder">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <div class="project-title">
+              <p class="eyebrow">Python / OCR / AI Tooling</p>
+              <h3>IntelligentHarnessDecoder</h3>
+              <p>
+                面向汽车线束图和电路图 PDF 的智能解析工具，将非结构化图纸信息整理成可复核结果。该项目在 Cursor 和 Codex 辅助下两天内完成。
+              </p>
+            </div>
+            <div class="project-content">
+              <div>
+                <h4>实现功能</h4>
+                <ul>
+                  <li>PDF 页面渲染与图像预处理</li>
+                  <li>OCR 文本识别与候选名称抽取</li>
+                  <li>规则层过滤、候选评分和召回补漏</li>
+                  <li>AI 视觉审核候选区域</li>
+                  <li>TXT / CSV / Excel 多格式导出</li>
+                  <li>生成带证据的人工复核材料</li>
+                </ul>
+              </div>
+              <div>
+                <h4>技术栈</h4>
+                <ul class="tags">
+                  <li>Python</li>
+                  <li>OCR</li>
+                  <li>PDF 解析</li>
+                  <li>图像预处理</li>
+                  <li>AI Vision</li>
+                  <li>Excel 导出</li>
+                  <li>Cursor</li>
+                  <li>Codex</li>
+                </ul>
+                <a class="text-link" href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">
+                  查看源码
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project reveal" id="poker-demo">
+          <div class="project-number">04</div>
+          <div class="project-body">
+            <div class="project-title">
+              <p class="eyebrow">C++ / Cocos / Application Demo</p>
+              <h3>pokerDemo</h3>
+              <p>
+                基于 C++ 的扑克交互 Demo，用于练习应用状态管理、卡牌模型、配置驱动和界面交互。该项目在 Cursor 和 Codex 辅助下两天内完成。
+              </p>
+            </div>
+            <div class="project-content">
+              <div>
+                <h4>实现功能</h4>
+                <ul>
+                  <li>卡牌模型与实例状态管理</li>
+                  <li>关卡配置读取和服务层封装</li>
+                  <li>桌面牌与手牌区匹配逻辑</li>
+                  <li>卡牌移动、替换和交互反馈</li>
+                  <li>撤回记录与状态恢复</li>
+                  <li>Cocos 资源与界面组件组织</li>
+                </ul>
+              </div>
+              <div>
+                <h4>技术栈</h4>
+                <ul class="tags">
+                  <li>C++</li>
+                  <li>Cocos</li>
+                  <li>UI 交互</li>
+                  <li>状态管理</li>
+                  <li>资源管理</li>
+                  <li>配置驱动</li>
+                  <li>Cursor</li>
+                  <li>Codex</li>
+                </ul>
+                <a class="text-link" href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">
+                  查看源码
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
 
-      <section class="section project-map reveal" id="projects">
+      <section class="section reveal" id="skills">
         <div class="section-heading">
-          <div>
-            <p class="eyebrow">Project Map</p>
-            <h2>从系统底层到 AI 辅助工具</h2>
-          </div>
-          <p class="section-kicker">主线是 C++、网络和分布式；AI 相关项目作为工具化和提效能力补充展示。</p>
+          <p class="eyebrow">Skills</p>
+          <h2>技术方向</h2>
         </div>
-
-        <div class="map-grid">
-          <a class="map-card active" href="#raft-kv">
-            <span>01</span>
-            <h3>raftKvstorage</h3>
-            <p>C++ / Raft / gRPC / 分布式 KV。</p>
-          </a>
-          <a class="map-card" href="#ai-network">
-            <span>02</span>
-            <h3>AI 弱网智能检测</h3>
-            <p>网络异常检测与报告分析。</p>
-          </a>
-          <a class="map-card" href="#harness-decoder">
-            <span>03</span>
-            <h3>IntelligentHarnessDecoder</h3>
-            <p>AI 辅助的 PDF/OCR 工具工程。</p>
-          </a>
-          <a class="map-card" href="#poker-demo">
-            <span>04</span>
-            <h3>pokerDemo</h3>
-            <p>从需求描述到可交互 Demo。</p>
-          </a>
-        </div>
-      </section>
-
-      <nav class="project-jump" aria-label="项目详情导航">
-        <a href="#raft-kv">Raft KV</a>
-        <a href="#ai-network">弱网检测</a>
-        <a href="#harness-decoder">Harness Decoder</a>
-        <a href="#poker-demo">Poker Demo</a>
-      </nav>
-
-      <section class="project-story reveal" id="raft-kv">
-        <div class="story-label">01 / Distributed KV Storage</div>
-        <div class="story-hero">
-          <div>
-            <p class="eyebrow">Core Systems Project</p>
-            <h2>raftKvstorage</h2>
-            <p class="lead">
-              基于 Raft 思想实现的分布式 KV 存储项目，覆盖节点协作、一致性、日志复制、持久化、客户端请求和底层存储结构。
-            </p>
-          </div>
-          <a class="source-card" href="https://github.com/dttilx/raftKvstorage" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            <strong>查看源码</strong>
-            <p>C++ / Raft / gRPC</p>
-          </a>
-        </div>
-        <div class="story-grid">
-          <article>
-            <h3>背景</h3>
-            <p>分布式 KV 存储需要处理 Leader 选举、日志同步、节点故障、客户端一致性读写等问题。这个项目用于系统化练习共识算法与后端工程组织。</p>
-          </article>
-          <article>
-            <h3>实现功能</h3>
-            <ul class="feature-list">
-              <li>Raft Leader 选举与任期管理</li>
-              <li>日志复制、提交与状态机应用</li>
-              <li>KVServer 与客户端 Clerk</li>
-              <li>Persister 持久化组件</li>
-              <li>gRPC / protobuf 通信接口</li>
-              <li>SkipList 底层存储结构</li>
-            </ul>
-          </article>
-          <article class="wide">
-            <h3>技术栈</h3>
-            <ul class="tag-cloud">
-              <li>C++</li>
-              <li>Raft</li>
-              <li>分布式一致性</li>
-              <li>KV Storage</li>
-              <li>gRPC</li>
-              <li>protobuf</li>
-              <li>CMake</li>
-              <li>多线程</li>
-              <li>持久化</li>
-              <li>SkipList</li>
-              <li>Linux</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="project-story reveal" id="ai-network">
-        <div class="story-label">02 / Network Diagnosis + AI Assist</div>
-        <div class="story-hero">
-          <div>
-            <p class="eyebrow">Network Tooling</p>
-            <h2>AI 弱网智能检测</h2>
-            <p class="lead">
-              面向延迟、丢包、抖动、连接失败等弱网场景，把网络检测指标整理成可分析报告，并用 AI 辅助做异常判断和结果解释。
-            </p>
-          </div>
-          <div class="status-card">
-            <span>状态</span>
-            <strong>本地项目，案例整理中</strong>
-            <p>公开仓库整理后补充源码入口。</p>
-          </div>
-        </div>
-        <div class="story-grid">
-          <article>
-            <h3>背景</h3>
-            <p>弱网问题通常不是单一指标异常，而是延迟、丢包、抖动、链路状态共同作用。项目重点是把检测结果整理成可判断、可追踪、可复盘的工程输出。</p>
-          </article>
-          <article>
-            <h3>实现功能</h3>
-            <ul class="feature-list">
-              <li>采集并整理网络质量指标</li>
-              <li>识别弱网、延迟、丢包和抖动异常</li>
-              <li>输出检测分级和问题归因辅助</li>
-              <li>生成检测报告，便于后续复盘</li>
-              <li>为规则判断和 AI 分析预留扩展接口</li>
-            </ul>
-          </article>
-          <article class="wide">
-            <h3>技术栈</h3>
-            <ul class="tag-cloud">
-              <li>Python</li>
-              <li>Network Diagnostics</li>
-              <li>异常分析</li>
-              <li>数据清洗</li>
-              <li>自动化脚本</li>
-              <li>报告生成</li>
-              <li>规则引擎</li>
-              <li>AI 辅助判断</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="project-story reveal" id="harness-decoder">
-        <div class="story-label">03 / AI Tooling</div>
-        <div class="story-hero">
-          <div>
-            <p class="eyebrow">AI Assisted Tooling</p>
-            <h2>IntelligentHarnessDecoder</h2>
-            <p class="lead">
-              面向汽车线束图和电路图 PDF 的智能解析工具，结合 OCR、规则抽取、候选评分和 AI 视觉审核，把非结构化图纸信息整理成可复核结果。
-            </p>
-          </div>
-          <a class="source-card" href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            <strong>查看源码</strong>
-            <p>Python / OCR / AI Vision</p>
-          </a>
-        </div>
-        <div class="ai-ribbon">Cursor + Codex 辅助开发，两天内完成从需求拆解、模块设计到可运行工具的落地。</div>
-        <div class="story-grid">
-          <article>
-            <h3>背景</h3>
-            <p>汽车线束图、电路图 PDF 中有大量元器件、连接器、端子、保险丝、继电器名称，人工整理成本高且容易遗漏。</p>
-          </article>
-          <article>
-            <h3>实现功能</h3>
-            <ul class="feature-list">
-              <li>PDF 页面渲染与图像预处理</li>
-              <li>OCR 文本识别与候选名称抽取</li>
-              <li>规则层过滤、候选评分和召回补漏</li>
-              <li>AI 视觉审核候选区域</li>
-              <li>TXT / CSV / Excel 多格式导出</li>
-              <li>生成带证据的人工复核材料</li>
-            </ul>
-          </article>
-          <article class="wide">
-            <h3>技术栈</h3>
-            <ul class="tag-cloud">
-              <li>Python</li>
-              <li>OCR</li>
-              <li>PDF 解析</li>
-              <li>图像预处理</li>
-              <li>AI Vision</li>
-              <li>候选评分</li>
-              <li>Excel 导出</li>
-              <li>自动化工作流</li>
-              <li>Cursor</li>
-              <li>Codex</li>
-              <li>Prompt 工程</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="project-story reveal" id="poker-demo">
-        <div class="story-label">04 / Application Demo</div>
-        <div class="story-hero">
-          <div>
-            <p class="eyebrow">Prototype to Demo</p>
-            <h2>pokerDemo</h2>
-            <p class="lead">
-              基于 C++ 的扑克交互 Demo，用于练习应用状态管理、卡牌模型、配置驱动、动画交互和可运行 Demo 的快速实现。
-            </p>
-          </div>
-          <a class="source-card" href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">
-            <span>GitHub</span>
-            <strong>查看源码</strong>
-            <p>C++ / Cocos / UI</p>
-          </a>
-        </div>
-        <div class="ai-ribbon">Cursor + Codex 辅助开发，两天内完成可运行 Demo，展示快速拆解、编码、调试和迭代能力。</div>
-        <div class="story-grid">
-          <article>
-            <h3>背景</h3>
-            <p>扑克交互场景能把规则逻辑、界面反馈、资源管理和撤回状态串起来，适合作为展示应用开发流程的小型 Demo。</p>
-          </article>
-          <article>
-            <h3>实现功能</h3>
-            <ul class="feature-list">
-              <li>卡牌模型与实例状态管理</li>
-              <li>关卡配置读取和服务层封装</li>
-              <li>桌面牌与手牌区匹配逻辑</li>
-              <li>卡牌移动、替换和交互反馈</li>
-              <li>撤回记录与状态恢复</li>
-              <li>Cocos 资源与界面组件组织</li>
-            </ul>
-          </article>
-          <article class="wide">
-            <h3>技术栈</h3>
-            <ul class="tag-cloud">
-              <li>C++</li>
-              <li>Cocos</li>
-              <li>游戏逻辑</li>
-              <li>UI 交互</li>
-              <li>状态管理</li>
-              <li>资源管理</li>
-              <li>配置驱动</li>
-              <li>撤回机制</li>
-              <li>快速原型</li>
-              <li>Cursor</li>
-              <li>Codex</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="section workflow reveal" id="workflow">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Engineering Workflow</p>
-            <h2>工程实现方式</h2>
-          </div>
-          <p class="section-kicker">先把系统边界和模块关系想清楚，再用工具提效。AI 是加速器，不替代底层理解。</p>
-        </div>
-        <div class="workflow-steps">
-          <article><span>01</span><strong>拆系统</strong><p>先明确模块边界、数据流、通信方式和异常路径。</p></article>
-          <article><span>02</span><strong>写核心</strong><p>围绕 C++、网络通信、状态管理和一致性逻辑实现主链路。</p></article>
-          <article><span>03</span><strong>用工具提效</strong><p>Cursor / Codex 用于生成样板、辅助调试、补文档和快速迭代。</p></article>
-          <article><span>04</span><strong>做交付</strong><p>整理 README、运行方式、截图和项目复盘，让工程能被别人验证。</p></article>
-        </div>
-      </section>
-
-      <section class="section skill-section reveal" id="skills">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Skills</p>
-            <h2>技术方向</h2>
-          </div>
-          <p class="section-kicker">核心能力放在 C++、网络、分布式和后端工程；AI 作为工具化能力补充展示。</p>
-        </div>
-        <div class="skill-columns">
-          <div class="skill-group">
-            <h3>C++ / 系统</h3>
-            <ul class="tag-cloud">
-              <li>C++</li>
-              <li>CMake</li>
-              <li>多线程</li>
-              <li>状态管理</li>
-              <li>持久化</li>
-              <li>Linux</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3>网络 / 分布式</h3>
-            <ul class="tag-cloud">
-              <li>Linux 网络编程</li>
-              <li>gRPC / RPC</li>
-              <li>protobuf</li>
-              <li>Raft 共识</li>
-              <li>KV Storage</li>
-              <li>网络检测</li>
-              <li>异常分析</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3>AI / 工具化</h3>
-            <ul class="tag-cloud">
-              <li>Python</li>
-              <li>OCR</li>
-              <li>PDF 解析</li>
-              <li>AI 视觉审核</li>
-              <li>Cursor / Codex</li>
-              <li>Prompt 工程</li>
-              <li>Git / GitHub</li>
-            </ul>
-          </div>
-        </div>
+        <ul class="tags skill-tags">
+          <li>C++</li>
+          <li>Linux 网络编程</li>
+          <li>RPC / gRPC</li>
+          <li>Raft</li>
+          <li>分布式 KV 存储</li>
+          <li>CMake</li>
+          <li>Python</li>
+          <li>OCR / PDF 解析</li>
+          <li>Cursor / Codex</li>
+          <li>Git / GitHub</li>
+        </ul>
       </section>
 
       <section class="section contact reveal" id="contact">
-        <p class="eyebrow">Contact</p>
-        <h2>联系我</h2>
-        <p>欢迎通过邮箱、电话或 GitHub 联系我，了解更多项目细节和代码更新。</p>
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>联系我</h2>
+        </div>
         <div class="contact-actions">
           <a class="button primary" href="mailto:3160294433@qq.com">3160294433@qq.com</a>
           <a class="button secondary" href="tel:18323002208">18323002208</a>
@@ -381,6 +238,6 @@
       </section>
     </main>
 
-    <script src="./script.js?v=2"></script>
+    <script src="./script.js?v=3"></script>
   </body>
 </html>
