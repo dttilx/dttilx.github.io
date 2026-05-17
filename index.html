@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="dttilx 的个人作品集，展示 AI Coding、AI 工具、分布式系统、后端工程与应用项目。"
+      content="dttilx 的个人作品集，展示 C++、Linux 网络编程、分布式系统、后端工程与 AI 辅助开发项目。"
     />
-    <title>dttilx | AI Coding Portfolio</title>
+    <title>dttilx | Systems Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -16,7 +16,7 @@
         <a class="brand" href="#top">dttilx</a>
         <div class="nav-links" aria-label="页面导航">
           <a href="#projects">Projects</a>
-          <a href="#workflow">Workflow</a>
+          <a href="#workflow">Engineering</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </div>
@@ -26,10 +26,10 @@
     <main id="top">
       <section class="hero reveal">
         <div class="hero-copy">
-          <p class="eyebrow">AI Coding / Backend Engineering / Systems</p>
-          <h1>用 AI 把想法推到可运行，也用系统能力把项目做稳。</h1>
+          <p class="eyebrow">C++ / Linux Network / Distributed Systems</p>
+          <h1>偏底层、偏网络，也把工程做成能跑起来的系统。</h1>
           <p class="intro">
-            我把作品集做成一条工程叙事：从真实问题出发，用 AI 辅助拆解、编码和调试，再落到 Python 工具、C++ 应用和分布式系统项目中。
+            我主要关注 C++ 后端、Linux 网络编程、RPC 通信、分布式一致性和系统工程实践。AI Coding 是我的提效工具，但作品集的主线仍然是底层能力、网络能力和工程落地能力。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">查看项目路径</a>
@@ -37,26 +37,27 @@
           </div>
         </div>
 
-        <aside class="hero-console" aria-label="AI Coding 工作流概览">
+        <aside class="hero-console" aria-label="系统工程能力概览">
           <div class="console-bar">
             <span></span>
             <span></span>
             <span></span>
-            <strong>portfolio.run</strong>
+            <strong>systems.trace</strong>
           </div>
           <div class="console-body">
-            <p><span>$</span> define goal</p>
-            <strong>AI weak-network diagnosis</strong>
-            <p><span>$</span> decompose modules</p>
+            <p><span>$</span> inspect stack</p>
+            <strong>C++ backend systems</strong>
+            <p><span>$</span> trace modules</p>
             <ul>
-              <li>signal capture</li>
-              <li>anomaly scoring</li>
-              <li>report output</li>
+              <li>raft consensus</li>
+              <li>grpc transport</li>
+              <li>linux network I/O</li>
             </ul>
-            <p><span>$</span> ship projects</p>
+            <p><span>$</span> project surface</p>
             <div class="mini-board">
-              <div>AI Tooling</div>
               <div>Raft KV</div>
+              <div>Network</div>
+              <div>AI Assist</div>
               <div>C++ Demo</div>
             </div>
           </div>
@@ -67,26 +68,26 @@
         <div class="section-heading">
           <div>
             <p class="eyebrow">Project Map</p>
-            <h2>四个项目，四种能力证明</h2>
+            <h2>从系统底层到 AI 辅助工具</h2>
           </div>
-          <p class="section-kicker">先看项目地图，再下滑进入每个项目的背景、功能、技术栈和实现重点。</p>
+          <p class="section-kicker">主线是 C++、网络和分布式；AI 相关项目作为工具化和提效能力补充展示。</p>
         </div>
 
         <div class="map-grid">
-          <a class="map-card active" href="#ai-network">
+          <a class="map-card active" href="#raft-kv">
             <span>01</span>
-            <h3>AI 弱网智能检测</h3>
-            <p>从网络异常到智能分析报告。</p>
-          </a>
-          <a class="map-card" href="#raft-kv">
-            <span>02</span>
             <h3>raftKvstorage</h3>
-            <p>从共识算法到分布式 KV。</p>
+            <p>C++ / Raft / gRPC / 分布式 KV。</p>
+          </a>
+          <a class="map-card" href="#ai-network">
+            <span>02</span>
+            <h3>AI 弱网智能检测</h3>
+            <p>网络异常检测与报告分析。</p>
           </a>
           <a class="map-card" href="#harness-decoder">
             <span>03</span>
             <h3>IntelligentHarnessDecoder</h3>
-            <p>从 PDF 图纸到结构化结果。</p>
+            <p>AI 辅助的 PDF/OCR 工具工程。</p>
           </a>
           <a class="map-card" href="#poker-demo">
             <span>04</span>
@@ -97,64 +98,17 @@
       </section>
 
       <nav class="project-jump" aria-label="项目详情导航">
-        <a href="#ai-network">AI 弱网检测</a>
         <a href="#raft-kv">Raft KV</a>
+        <a href="#ai-network">弱网检测</a>
         <a href="#harness-decoder">Harness Decoder</a>
         <a href="#poker-demo">Poker Demo</a>
       </nav>
 
-      <section class="project-story reveal" id="ai-network">
-        <div class="story-label">01 / AI Network Diagnosis</div>
-        <div class="story-hero">
-          <div>
-            <p class="eyebrow">Current Focus</p>
-            <h2>AI 弱网智能检测</h2>
-            <p class="lead">
-              面向延迟、丢包、抖动、连接失败等弱网场景，把传统网络指标和智能分析流程结合起来，输出更容易复盘的检测结果。
-            </p>
-          </div>
-          <div class="status-card">
-            <span>状态</span>
-            <strong>本地项目，案例整理中</strong>
-            <p>公开仓库整理后补充源码入口。</p>
-          </div>
-        </div>
-        <div class="story-grid">
-          <article>
-            <h3>背景</h3>
-            <p>弱网问题通常不是单一指标异常，而是延迟、丢包、抖动、链路状态共同作用。项目重点是把检测结果整理成可判断、可追踪、可复盘的工程输出。</p>
-          </article>
-          <article>
-            <h3>实现功能</h3>
-            <ul class="feature-list">
-              <li>采集并整理网络质量指标</li>
-              <li>识别弱网、延迟、丢包和抖动异常</li>
-              <li>输出检测分级和问题归因辅助</li>
-              <li>生成检测报告，便于后续复盘</li>
-              <li>为规则判断和 AI 分析预留扩展接口</li>
-            </ul>
-          </article>
-          <article class="wide">
-            <h3>技术栈</h3>
-            <ul class="tag-cloud">
-              <li>Python</li>
-              <li>AI 判断逻辑</li>
-              <li>Network Diagnostics</li>
-              <li>异常分析</li>
-              <li>数据清洗</li>
-              <li>自动化脚本</li>
-              <li>报告生成</li>
-              <li>规则引擎</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
       <section class="project-story reveal" id="raft-kv">
-        <div class="story-label">02 / Distributed System</div>
+        <div class="story-label">01 / Distributed KV Storage</div>
         <div class="story-hero">
           <div>
-            <p class="eyebrow">Systems Project</p>
+            <p class="eyebrow">Core Systems Project</p>
             <h2>raftKvstorage</h2>
             <p class="lead">
               基于 Raft 思想实现的分布式 KV 存储项目，覆盖节点协作、一致性、日志复制、持久化、客户端请求和底层存储结构。
@@ -201,11 +155,58 @@
         </div>
       </section>
 
+      <section class="project-story reveal" id="ai-network">
+        <div class="story-label">02 / Network Diagnosis + AI Assist</div>
+        <div class="story-hero">
+          <div>
+            <p class="eyebrow">Network Tooling</p>
+            <h2>AI 弱网智能检测</h2>
+            <p class="lead">
+              面向延迟、丢包、抖动、连接失败等弱网场景，把网络检测指标整理成可分析报告，并用 AI 辅助做异常判断和结果解释。
+            </p>
+          </div>
+          <div class="status-card">
+            <span>状态</span>
+            <strong>本地项目，案例整理中</strong>
+            <p>公开仓库整理后补充源码入口。</p>
+          </div>
+        </div>
+        <div class="story-grid">
+          <article>
+            <h3>背景</h3>
+            <p>弱网问题通常不是单一指标异常，而是延迟、丢包、抖动、链路状态共同作用。项目重点是把检测结果整理成可判断、可追踪、可复盘的工程输出。</p>
+          </article>
+          <article>
+            <h3>实现功能</h3>
+            <ul class="feature-list">
+              <li>采集并整理网络质量指标</li>
+              <li>识别弱网、延迟、丢包和抖动异常</li>
+              <li>输出检测分级和问题归因辅助</li>
+              <li>生成检测报告，便于后续复盘</li>
+              <li>为规则判断和 AI 分析预留扩展接口</li>
+            </ul>
+          </article>
+          <article class="wide">
+            <h3>技术栈</h3>
+            <ul class="tag-cloud">
+              <li>Python</li>
+              <li>Network Diagnostics</li>
+              <li>异常分析</li>
+              <li>数据清洗</li>
+              <li>自动化脚本</li>
+              <li>报告生成</li>
+              <li>规则引擎</li>
+              <li>AI 辅助判断</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
       <section class="project-story reveal" id="harness-decoder">
         <div class="story-label">03 / AI Tooling</div>
         <div class="story-hero">
           <div>
-            <p class="eyebrow">AI Assisted Build</p>
+            <p class="eyebrow">AI Assisted Tooling</p>
             <h2>IntelligentHarnessDecoder</h2>
             <p class="lead">
               面向汽车线束图和电路图 PDF 的智能解析工具，结合 OCR、规则抽取、候选评分和 AI 视觉审核，把非结构化图纸信息整理成可复核结果。
@@ -308,16 +309,16 @@
       <section class="section workflow reveal" id="workflow">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">Workflow</p>
-            <h2>我怎么使用 AI Coding</h2>
+            <p class="eyebrow">Engineering Workflow</p>
+            <h2>工程实现方式</h2>
           </div>
-          <p class="section-kicker">不是只让 AI 写代码，而是把它放进需求拆解、方案验证、编码、调试和文档整理的完整流程。</p>
+          <p class="section-kicker">先把系统边界和模块关系想清楚，再用工具提效。AI 是加速器，不替代底层理解。</p>
         </div>
         <div class="workflow-steps">
-          <article><span>01</span><strong>拆需求</strong><p>把想法拆成模块、输入输出、边界条件和可验收结果。</p></article>
-          <article><span>02</span><strong>搭结构</strong><p>先定目录、数据流和核心接口，再进入代码实现。</p></article>
-          <article><span>03</span><strong>快迭代</strong><p>用 Cursor / Codex 辅助实现、重构、补测试和修复问题。</p></article>
-          <article><span>04</span><strong>做交付</strong><p>整理 README、截图、运行方式和项目复盘，让作品能被别人看懂。</p></article>
+          <article><span>01</span><strong>拆系统</strong><p>先明确模块边界、数据流、通信方式和异常路径。</p></article>
+          <article><span>02</span><strong>写核心</strong><p>围绕 C++、网络通信、状态管理和一致性逻辑实现主链路。</p></article>
+          <article><span>03</span><strong>用工具提效</strong><p>Cursor / Codex 用于生成样板、辅助调试、补文档和快速迭代。</p></article>
+          <article><span>04</span><strong>做交付</strong><p>整理 README、运行方式、截图和项目复盘，让工程能被别人验证。</p></article>
         </div>
       </section>
 
@@ -327,41 +328,41 @@
             <p class="eyebrow">Skills</p>
             <h2>技术方向</h2>
           </div>
-          <p class="section-kicker">AI 工具开发、后端工程、系统能力和交付意识一起构成我的项目能力。</p>
+          <p class="section-kicker">核心能力放在 C++、网络、分布式和后端工程；AI 作为工具化能力补充展示。</p>
         </div>
         <div class="skill-columns">
           <div class="skill-group">
-            <h3>AI Coding</h3>
+            <h3>C++ / 系统</h3>
             <ul class="tag-cloud">
-              <li>Cursor</li>
-              <li>Codex</li>
-              <li>Prompt 工程</li>
-              <li>需求拆解</li>
-              <li>快速原型</li>
-              <li>调试迭代</li>
+              <li>C++</li>
+              <li>CMake</li>
+              <li>多线程</li>
+              <li>状态管理</li>
+              <li>持久化</li>
+              <li>Linux</li>
             </ul>
           </div>
           <div class="skill-group">
-            <h3>AI 工具与数据</h3>
+            <h3>网络 / 分布式</h3>
             <ul class="tag-cloud">
+              <li>Linux 网络编程</li>
+              <li>gRPC / RPC</li>
+              <li>protobuf</li>
+              <li>Raft 共识</li>
+              <li>KV Storage</li>
+              <li>网络检测</li>
+              <li>异常分析</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>AI / 工具化</h3>
+            <ul class="tag-cloud">
+              <li>Python</li>
               <li>OCR</li>
               <li>PDF 解析</li>
               <li>AI 视觉审核</li>
-              <li>智能检测</li>
-              <li>异常分析</li>
-              <li>数据清洗</li>
-              <li>结果导出</li>
-            </ul>
-          </div>
-          <div class="skill-group">
-            <h3>后端与系统</h3>
-            <ul class="tag-cloud">
-              <li>Python</li>
-              <li>C/C++</li>
-              <li>Linux 网络编程</li>
-              <li>Raft 共识</li>
-              <li>gRPC / RPC</li>
-              <li>CMake</li>
+              <li>Cursor / Codex</li>
+              <li>Prompt 工程</li>
               <li>Git / GitHub</li>
             </ul>
           </div>
