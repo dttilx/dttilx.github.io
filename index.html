@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="dttilx 的个人作品集，展示分布式系统、网络编程、后端工程与应用项目。"
+      content="dttilx 的个人作品集，展示 AI 工具、分布式系统、后端工程与应用项目。"
     />
     <title>dttilx | Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
@@ -26,10 +26,10 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Backend Developer / Systems Learner</p>
+          <p class="eyebrow">AI / Backend / Distributed Systems</p>
           <h1>dttilx 的个人作品集</h1>
           <p class="intro">
-            关注 C/C++ 后端开发、网络编程、分布式系统与工程实践。这里整理了我的项目、技术栈和持续学习中的作品。
+            关注 AI 工具开发、C/C++ 后端工程、网络编程与分布式系统。这里整理了更能体现工程复杂度和实际场景价值的项目。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#projects">查看作品</a>
@@ -42,113 +42,82 @@
           <img class="avatar" src="https://github.com/dttilx.png" alt="dttilx GitHub 头像" />
           <div>
             <h2>dttilx</h2>
-            <p>把底层原理、系统设计和可运行的项目放到同一个作品集里。</p>
+            <p>把真实问题、系统设计和可运行的工程项目放到同一个作品集里。</p>
           </div>
         </aside>
       </section>
 
       <section class="section" id="projects">
         <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>全部作品</h2>
+          <p class="eyebrow">Selected Projects</p>
+          <h2>精选作品</h2>
         </div>
         <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-topline">
+              <span>AI / Network Diagnosis</span>
+              <span>本地项目</span>
+            </div>
+            <h3>AI 弱网智能检测</h3>
+            <p>
+              面向弱网、延迟、丢包、抖动等网络异常场景的智能检测项目，用于辅助识别网络质量问题并输出可分析的检测结果。
+            </p>
+            <ul class="tags">
+              <li>AI</li>
+              <li>Network</li>
+              <li>Diagnostics</li>
+              <li>Python</li>
+            </ul>
+          </article>
+
           <article class="project-card featured">
             <div class="project-topline">
               <span>Distributed System</span>
               <a href="https://github.com/dttilx/raftKvstorage" target="_blank" rel="noreferrer">源码</a>
             </div>
             <h3>raftKvstorage</h3>
-            <p>基于 Raft 思想实现的分布式 KV 存储项目，重点覆盖一致性、节点协作、日志复制与故障恢复。</p>
+            <p>
+              基于 Raft 思想实现的分布式 KV 存储项目，覆盖一致性、节点协作、日志复制、持久化与故障恢复等核心问题。
+            </p>
             <ul class="tags">
               <li>C++</li>
               <li>Raft</li>
               <li>KV Storage</li>
-              <li>RPC</li>
+              <li>gRPC</li>
             </ul>
           </article>
 
           <article class="project-card featured">
             <div class="project-topline">
-              <span>Consensus</span>
-              <a href="https://github.com/dttilx/grpc_raft" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>grpc_raft</h3>
-            <p>围绕 Raft 共识与 gRPC 通信搭建的后端工程项目，用于练习分布式节点间通信与状态同步。</p>
-            <ul class="tags">
-              <li>gRPC</li>
-              <li>Raft</li>
-              <li>C++</li>
-              <li>Backend</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Network</span>
-              <a href="https://github.com/dttilx/epoll_talkroom" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>epoll_talkroom</h3>
-            <p>基于 epoll 的多人聊天室项目，聚焦 Linux 网络编程、事件驱动模型与并发连接处理。</p>
-            <ul class="tags">
-              <li>Linux</li>
-              <li>epoll</li>
-              <li>Socket</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Network</span>
-              <a href="https://github.com/dttilx/epoll_mutipersontalkroom" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>epoll_mutipersontalkroom</h3>
-            <p>多人聊天系统练习项目，用于拆解连接管理、消息广播、客户端交互和服务端事件循环。</p>
-            <ul class="tags">
-              <li>epoll</li>
-              <li>TCP</li>
-              <li>Server</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Application</span>
-              <a href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">源码</a>
-            </div>
-            <h3>pokerDemo</h3>
-            <p>扑克相关 Demo 项目，用于练习业务逻辑建模、交互流程设计和基础应用开发。</p>
-            <ul class="tags">
-              <li>Game Demo</li>
-              <li>Logic</li>
-              <li>Practice</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div class="project-topline">
-              <span>Tooling</span>
+              <span>AI Tooling</span>
               <a href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">源码</a>
             </div>
             <h3>IntelligentHarnessDecoder</h3>
-            <p>面向解码、分析或自动化处理场景的工具项目，适合展示工程化封装与问题拆解能力。</p>
+            <p>
+              面向汽车线束图和电路图 PDF 的智能解析工具，结合 OCR、规则抽取、候选评分和 AI 视觉审核生成结构化结果。
+            </p>
             <ul class="tags">
-              <li>Tool</li>
-              <li>Decoder</li>
-              <li>Automation</li>
+              <li>Python</li>
+              <li>OCR</li>
+              <li>PDF</li>
+              <li>AI Review</li>
             </ul>
           </article>
 
           <article class="project-card">
             <div class="project-topline">
-              <span>Practice</span>
-              <a href="https://github.com/dttilx/first" target="_blank" rel="noreferrer">源码</a>
+              <span>Application Demo</span>
+              <a href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">源码</a>
             </div>
-            <h3>first</h3>
-            <p>早期练习仓库，记录基础开发、语言学习和项目搭建过程中的阶段性实践。</p>
+            <h3>pokerDemo</h3>
+            <p>
+              基于 C++ 的扑克交互 Demo，包含卡牌模型、关卡配置、匹配逻辑、撤回记录和界面交互流程。
+            </p>
             <ul class="tags">
-              <li>Learning</li>
-              <li>Practice</li>
+              <li>C++</li>
+              <li>Cocos</li>
+              <li>Game Logic</li>
+              <li>UI</li>
             </ul>
           </article>
         </div>
@@ -160,9 +129,10 @@
           <h2>技术方向</h2>
         </div>
         <div class="skill-list">
+          <span>AI 工具开发</span>
+          <span>Python</span>
           <span>C/C++</span>
           <span>Linux 网络编程</span>
-          <span>Socket / epoll</span>
           <span>Raft 共识</span>
           <span>gRPC / RPC</span>
           <span>分布式 KV 存储</span>
