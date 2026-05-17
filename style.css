@@ -227,10 +227,20 @@ h3 {
   padding: 22px;
   background: var(--panel);
   box-shadow: 0 8px 24px rgba(28, 32, 27, 0.04);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
 .project-card.featured {
   background: var(--panel-strong);
+}
+
+a.project-card:hover {
+  border-color: rgba(31, 111, 91, 0.46);
+  box-shadow: 0 16px 34px rgba(28, 32, 27, 0.1);
+  transform: translateY(-3px);
 }
 
 .project-topline {
@@ -250,6 +260,15 @@ h3 {
 
 .project-card p {
   color: var(--muted);
+}
+
+.project-note {
+  border-left: 3px solid var(--warm);
+  margin: 4px 0 18px;
+  padding-left: 10px;
+  color: var(--accent-strong);
+  font-size: 0.92rem;
+  font-weight: 650;
 }
 
 .tags {
@@ -292,6 +311,12 @@ h3 {
 .contact p {
   max-width: 720px;
   color: var(--muted);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 @media (max-width: 880px) {
