@@ -8,6 +8,7 @@
   --line: rgba(148, 163, 184, 0.18);
   --accent: #7dd3fc;
   --accent-strong: #bae6fd;
+  --warm: #facc15;
 }
 
 * {
@@ -152,13 +153,16 @@ a {
 
 .project-list {
   display: grid;
-  gap: 18px;
+  gap: 28px;
 }
 
 .project {
-  border: 1px solid transparent;
-  border-radius: 8px;
-  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(125, 211, 252, 0.08), transparent 36%),
+    rgba(17, 28, 51, 0.72);
+  padding: 26px;
   transition:
     background 160ms ease,
     border-color 160ms ease,
@@ -166,8 +170,10 @@ a {
 }
 
 .project:hover {
-  border-color: var(--line);
-  background: rgba(17, 28, 51, 0.78);
+  border-color: rgba(125, 211, 252, 0.34);
+  background:
+    linear-gradient(135deg, rgba(125, 211, 252, 0.12), transparent 38%),
+    rgba(17, 28, 51, 0.9);
   transform: translateY(-2px);
 }
 
@@ -182,14 +188,17 @@ a {
   text-transform: uppercase;
 }
 
+.project-meta span:first-child {
+  color: var(--warm);
+}
+
 .project h2 {
   margin: 0 0 10px;
   font-size: 1.35rem;
   line-height: 1.25;
 }
 
-.project p,
-.project dd {
+.project p {
   color: var(--muted);
 }
 
@@ -197,19 +206,43 @@ a {
   margin: 0 0 18px;
 }
 
-.project dl {
+.project-detail {
   display: grid;
-  gap: 12px;
-  margin: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr);
+  gap: 22px;
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
-.project dt {
+.project-detail h3 {
+  margin: 0 0 8px;
   color: var(--text);
+  font-size: 0.95rem;
   font-weight: 850;
 }
 
-.project dd {
-  margin: 2px 0 0;
+.project-detail p {
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tags li {
+  border: 1px solid rgba(125, 211, 252, 0.24);
+  border-radius: 999px;
+  background: rgba(125, 211, 252, 0.08);
+  color: var(--accent-strong);
+  padding: 5px 9px;
+  font-size: 0.78rem;
+  font-weight: 800;
 }
 
 .skills {
@@ -260,5 +293,9 @@ a {
   .panel {
     min-height: auto;
     padding-bottom: 58px;
+  }
+
+  .project-detail {
+    grid-template-columns: 1fr;
   }
 }
