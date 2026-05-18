@@ -39,7 +39,7 @@
         <section class="panel" id="about">
           <p class="eyebrow">About</p>
           <p class="intro">
-            我主要学习和实践偏底层、偏网络方向的工程项目，包括 C++ 后端、RPC、分布式一致性、KV 存储和 Linux 网络编程。AI 工具会作为开发提效方式使用，但作品集主线仍然是系统能力和工程落地。
+            我主要学习和实践偏底层、偏网络方向的工程项目，包括 C++ 后端、Linux 网络编程、RPC、分布式一致性、KV 存储和 eBPF 等系统观测方向；同时保留 AI 工具链能力，例如 RAG、LangChain、OCR 和 AI 辅助开发。
           </p>
         </section>
 
@@ -79,23 +79,28 @@
             <article class="project">
               <div class="project-meta">
                 <span>02</span>
-                <span>整理中</span>
+                <span>本地项目</span>
               </div>
               <h2>AI 弱网智能检测</h2>
               <p>
-                面向弱网场景的网络质量检测项目，针对延迟、丢包、抖动、连接失败等情况生成可分析的检测结果。
+                面向弱网场景的网络质量检测项目，结合网络指标采集、系统观测和 AI 分析能力，针对延迟、丢包、抖动、连接失败等情况生成可分析的检测结果。
               </p>
               <div class="project-detail">
                 <div>
                   <h3>实现功能</h3>
-                  <p>网络指标采集、弱网状态识别、异常分析、检测分级、结果报告生成，并预留 AI 辅助判断能力。</p>
+                  <p>网络指标采集、弱网状态识别、异常分析、检测分级、结果报告生成；后续可结合 eBPF 做内核侧网络观测，并通过 RAG / LangChain 组织故障知识和诊断建议。</p>
                 </div>
                 <div>
                   <h3>技术栈</h3>
                   <ul class="tags">
                     <li>Python</li>
+                    <li>C++</li>
+                    <li>Linux 网络</li>
+                    <li>eBPF</li>
                     <li>网络检测</li>
                     <li>异常分析</li>
+                    <li>RAG</li>
+                    <li>LangChain</li>
                     <li>数据清洗</li>
                     <li>自动化脚本</li>
                     <li>报告生成</li>
@@ -171,12 +176,16 @@
           <p class="eyebrow">Skills</p>
           <ul class="skills">
             <li>C++</li>
+            <li>底层系统</li>
             <li>Linux 网络编程</li>
+            <li>eBPF</li>
             <li>RPC / gRPC</li>
             <li>Raft</li>
             <li>分布式 KV 存储</li>
             <li>CMake</li>
             <li>Python</li>
+            <li>RAG</li>
+            <li>LangChain</li>
             <li>OCR / PDF 解析</li>
             <li>Cursor / Codex</li>
             <li>Git / GitHub</li>
@@ -187,7 +196,7 @@
           <p class="eyebrow">Contact</p>
           <p>3160294433@qq.com</p>
           <p>18323002208</p>
-          <p><a href="https://github.com/dttilx" target="_blank" rel="noreferrer">github.com/dttilx</a></p>
+          <p><a href="https://github.com/dttilx" target="_blank" rel="noreferrer">https://github.com/dttilx</a></p>
         </section>
       </section>
     </main>

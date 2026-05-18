@@ -135,6 +135,12 @@ a {
   scroll-margin-top: 80px;
 }
 
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .eyebrow {
   margin: 0 0 18px;
   color: var(--accent);
