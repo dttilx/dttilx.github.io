@@ -198,6 +198,12 @@ a {
   color: var(--warm);
 }
 
+.source-placeholder {
+  color: var(--faint);
+  cursor: default;
+  user-select: none;
+}
+
 .project h2 {
   margin: 0 0 10px;
   font-size: 1.35rem;
