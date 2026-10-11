@@ -49,6 +49,41 @@
             <article class="project">
               <div class="project-meta">
                 <span>01</span>
+                <span class="source-placeholder" title="源码在本地整理，暂未公开">本地开发</span>
+              </div>
+              <h2>MCP + Agent Runtime</h2>
+              <p>
+                面向 AI Agent 的工具接入与运行时项目：以 C++ 实现 MCP 客户端和插件化服务器，结合 RAG 按需检索工具，并在工具层之上构建 Python Agent Runtime，串联请求路由、模型调用、工具执行和会话管理。
+              </p>
+              <div class="project-detail">
+                <div>
+                  <h3>实现功能</h3>
+                  <p>MCP 客户端支持 STDIO / SSE，服务器支持 STDIO / SSE / HTTP Stream 和动态插件加载；RAG 模块提供向量化、LRU 缓存和余弦相似度工具检索。</p>
+                  <p>Agent Runtime 实现 Router / Agent Loop、DeepSeek 模型接入、真实 C++ MCP 工具调用、会话恢复、上下文压缩、Markdown 记忆读写、SSE 事件流与回放，以及运行追踪和脱敏调试信息导出。</p>
+                </div>
+                <div>
+                  <h3>技术栈</h3>
+                  <ul class="tags">
+                    <li>C++20</li>
+                    <li>Python</li>
+                    <li>MCP</li>
+                    <li>JSON-RPC 2.0</li>
+                    <li>FastAPI</li>
+                    <li>Pydantic</li>
+                    <li>DeepSeek</li>
+                    <li>RAG</li>
+                    <li>Embedding</li>
+                    <li>SSE</li>
+                    <li>CMake</li>
+                    <li>pytest</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-meta">
+                <span>02</span>
                 <a href="https://github.com/dttilx/raftKv" target="_blank" rel="noreferrer">源码</a>
               </div>
               <h2>raftKv</h2>
@@ -78,7 +113,7 @@
 
             <article class="project">
               <div class="project-meta">
-                <span>02</span>
+                <span>03</span>
                 <span class="source-placeholder" title="源码在本地整理，暂未公开">本地开发</span>
               </div>
               <h2>AI 弱网智能检测</h2>
@@ -112,7 +147,7 @@
 
             <article class="project">
               <div class="project-meta">
-                <span>03</span>
+                <span>04</span>
                 <a href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">源码</a>
               </div>
               <h2>IntelligentHarnessDecoder</h2>
@@ -140,35 +175,6 @@
               </div>
             </article>
 
-            <article class="project">
-              <div class="project-meta">
-                <span>04</span>
-                <a href="https://github.com/dttilx/pokerDemo" target="_blank" rel="noreferrer">源码</a>
-              </div>
-              <h2>pokerDemo</h2>
-              <p>
-                基于 C++ 的扑克交互 Demo，用于练习卡牌模型、状态管理、配置驱动和界面交互。
-              </p>
-              <div class="project-detail">
-                <div>
-                  <h3>实现功能</h3>
-                  <p>卡牌模型、关卡配置、桌面牌与手牌匹配、卡牌移动和替换、撤回记录、状态恢复、Cocos 资源组织。</p>
-                </div>
-                <div>
-                  <h3>技术栈</h3>
-                  <ul class="tags">
-                    <li>C++</li>
-                    <li>Cocos</li>
-                    <li>UI 交互</li>
-                    <li>状态管理</li>
-                    <li>资源管理</li>
-                    <li>配置驱动</li>
-                    <li>Cursor</li>
-                    <li>Codex</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
           </div>
         </section>
 
