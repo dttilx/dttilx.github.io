@@ -121,6 +121,42 @@
             <article class="project">
               <div class="project-meta">
                 <span>03</span>
+                <span class="source-placeholder" title="项目源码暂未公开">源码未公开</span>
+              </div>
+              <h2>AI 弱网智能检测</h2>
+              <p>
+                面向 Linux 环境的弱网检测与 RAG 辅助诊断项目，围绕高延迟、丢包、抖动和连接失败等网络异常，串联网络检测、日志采集、故障知识检索与大模型分析，结合现场检测信息和相关知识分析弱网的可能原因，并形成诊断报告。
+              </p>
+              <div class="project-detail">
+                <div>
+                  <h3>实现功能</h3>
+                  <p><strong>Linux 检测与日志采集：</strong>在 Linux 环境下采集网络质量指标和相关日志，整理延迟、丢包、抖动与连接失败等异常信息，作为后续诊断的输入。</p>
+                  <p><strong>RAG 故障知识检索：</strong>以检测结果和异常日志为检索上下文，从故障知识中查找相关现象、原因说明与排查方法，为模型分析提供针对性的知识依据。</p>
+                  <p><strong>日志与知识联合分析：</strong>将采集到的日志、网络指标和检索结果共同交给大模型，结合现场现象分析可能原因并整理排查建议；分析结论保留为待验证的原因判断。</p>
+                  <p><strong>诊断报告：</strong>汇总检测现象、日志信息、相关故障知识、可能原因和排查建议，形成从网络检测到 RAG 辅助分析的完整链路，便于后续复核与定位问题。</p>
+                  <h3>后续方向</h3>
+                  <p>结合 eBPF 扩展 Linux 内核侧网络观测，为日志分析和 RAG 诊断提供更细粒度的网络事件信息。</p>
+                </div>
+                <div>
+                  <h3>技术栈</h3>
+                  <ul class="tags">
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Linux</li>
+                    <li>网络检测</li>
+                    <li>日志采集与分析</li>
+                    <li>RAG</li>
+                    <li>故障知识检索</li>
+                    <li>LLM 辅助诊断</li>
+                    <li>诊断报告</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-meta">
+                <span>04</span>
                 <a href="https://github.com/dttilx/raftKv" target="_blank" rel="noreferrer">源码</a>
               </div>
               <h2>raftKv</h2>
@@ -143,36 +179,6 @@
                     <li>多线程</li>
                     <li>SkipList</li>
                     <li>Linux</li>
-                  </ul>
-                </div>
-              </div>
-            </article>
-
-            <article class="project">
-              <div class="project-meta">
-                <span>04</span>
-                <span class="source-placeholder" title="源码在本地整理，暂未公开">本地开发</span>
-              </div>
-              <h2>AI 弱网智能检测</h2>
-              <p>
-                面向弱网场景的网络质量检测项目，结合网络指标采集、系统观测和 AI 分析能力，针对延迟、丢包、抖动、连接失败等情况生成可分析的检测结果。
-              </p>
-              <div class="project-detail">
-                <div>
-                  <h3>实现功能</h3>
-                  <p>网络指标采集、弱网状态识别、异常分析、检测分级、结果报告生成；后续可结合 eBPF 做内核侧网络观测，并通过 RAG / LangChain 组织故障知识和诊断建议。</p>
-                </div>
-                <div>
-                  <h3>技术栈</h3>
-                  <ul class="tags">
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>Linux 网络</li>
-                    <li>eBPF</li>
-                    <li>网络检测</li>
-                    <li>异常分析</li>
-                    <li>AI 辅助判断</li>
-                    <li>报告生成</li>
                   </ul>
                 </div>
               </div>
