@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="dttilx 的个人作品集，展示 C++、Linux 网络编程、分布式系统、后端工程与 AI 辅助开发项目。"
+      content="dttilx 的个人作品集，展示 AI Agent、MCP、LangGraph、RAG、多模态应用，以及 C++ 后端、网络编程与分布式系统项目。"
     />
     <title>dttilx | Portfolio</title>
     <link rel="stylesheet" href="./style.css?v=sidebar-20260518" />
@@ -15,9 +15,9 @@
       <aside class="sidebar">
         <div>
           <a class="name" href="#about">dttilx</a>
-          <p class="role">C++ / Backend / Systems</p>
+          <p class="role">AI Agent / C++ Backend</p>
           <p class="summary">
-            关注 C++ 后端、Linux 网络编程、RPC 通信、分布式一致性和系统工程实践。
+            关注 AI Agent、MCP 工具调用、RAG 与多模态应用，同时实践 C++ 后端、Linux 网络编程和分布式系统。
           </p>
         </div>
 
@@ -39,7 +39,7 @@
         <section class="panel" id="about">
           <p class="eyebrow">About</p>
           <p class="intro">
-            我主要学习和实践偏底层、偏网络方向的工程项目，包括 C++ 后端、Linux 网络编程、RPC、分布式一致性、KV 存储和 eBPF 等系统观测方向；同时保留 AI 工具链能力，例如 RAG、LangChain、OCR 和 AI 辅助开发。
+            我主要实践 AI 应用与后端系统工程：围绕 AI Agent 构建模型接入、MCP 工具调用、上下文与记忆管理，结合 LangGraph、RAG 和多模态证据处理实现可追溯、可复核、可恢复的业务流程。系统方向保留 C++、Linux 网络编程、RPC、Raft 与 KV 存储实践，关注从底层通信到 AI 工作流的完整链路。
           </p>
         </section>
 
@@ -67,6 +67,8 @@
                     <li>C++20</li>
                     <li>Python</li>
                     <li>MCP</li>
+                    <li>Agent Loop</li>
+                    <li>Tool Calling</li>
                     <li>JSON-RPC 2.0</li>
                     <li>FastAPI</li>
                     <li>Pydantic</li>
@@ -84,6 +86,41 @@
             <article class="project">
               <div class="project-meta">
                 <span>02</span>
+                <a href="https://github.com/dttilx/ai_fde" target="_blank" rel="noreferrer">源码</a>
+              </div>
+              <h2>APX-240 现场故障诊断 Agent</h2>
+              <p>
+                面向模拟自动封装设备的故障诊断工作台，将文字报障、图片 OCR 和视频关键帧组织为可复核的证据，以 LangGraph 串联知识检索、诊断报告、人工复核和追问恢复。
+              </p>
+              <div class="project-detail">
+                <div>
+                  <h3>实现功能</h3>
+                  <p>关键词与 pgvector 混合检索、RRF 排序融合和引用溯源；LangGraph checkpoint 持久化与 interrupt 暂停恢复；本地 OCR、QR 解码、视频关键帧提取与候选证据复核；安全升级、专家接管和维修反馈闭环。</p>
+                  <p>提供模型适配与检索 / 引用评估接口。当前诊断及向量使用规则和模拟数据，真实大模型与语义检索效果待验收。</p>
+                </div>
+                <div>
+                  <h3>技术栈</h3>
+                  <ul class="tags">
+                    <li>Python</li>
+                    <li>LangGraph</li>
+                    <li>RAG</li>
+                    <li>人工复核</li>
+                    <li>FastAPI</li>
+                    <li>PostgreSQL</li>
+                    <li>pgvector</li>
+                    <li>RapidOCR</li>
+                    <li>OpenCV</li>
+                    <li>MinIO</li>
+                    <li>Next.js / React</li>
+                    <li>Docker</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project-meta">
+                <span>03</span>
                 <a href="https://github.com/dttilx/raftKv" target="_blank" rel="noreferrer">源码</a>
               </div>
               <h2>raftKv</h2>
@@ -113,7 +150,7 @@
 
             <article class="project">
               <div class="project-meta">
-                <span>03</span>
+                <span>04</span>
                 <span class="source-placeholder" title="源码在本地整理，暂未公开">本地开发</span>
               </div>
               <h2>AI 弱网智能检测</h2>
@@ -134,12 +171,8 @@
                     <li>eBPF</li>
                     <li>网络检测</li>
                     <li>异常分析</li>
-                    <li>RAG</li>
-                    <li>LangChain</li>
-                    <li>数据清洗</li>
-                    <li>自动化脚本</li>
-                    <li>报告生成</li>
                     <li>AI 辅助判断</li>
+                    <li>报告生成</li>
                   </ul>
                 </div>
               </div>
@@ -147,10 +180,10 @@
 
             <article class="project">
               <div class="project-meta">
-                <span>04</span>
+                <span>05</span>
                 <a href="https://github.com/dttilx/IntelligentHarnessDecoder" target="_blank" rel="noreferrer">源码</a>
               </div>
-              <h2>IntelligentHarnessDecoder</h2>
+              <h2>Intelligent<wbr>Harness<wbr>Decoder</h2>
               <p>
                 汽车线束图和电路图 PDF 智能解析工具，用于从图纸中提取元器件、连接器、端子等名称并导出结构化结果。
               </p>
@@ -166,10 +199,8 @@
                     <li>OCR</li>
                     <li>PDF 解析</li>
                     <li>图像预处理</li>
-                    <li>AI Vision</li>
+                    <li>多模态视觉审核</li>
                     <li>Excel 导出</li>
-                    <li>Cursor</li>
-                    <li>Codex</li>
                   </ul>
                 </div>
               </div>
@@ -181,43 +212,36 @@
         <section class="panel" id="skills">
           <p class="eyebrow">Skills</p>
           <ul class="skills">
-            <li>C++</li>
+            <li>AI Agent / Agent Loop</li>
+            <li>LLM API 接入</li>
+            <li>MCP / Tool Calling</li>
+            <li>LangGraph</li>
+            <li>LangChain</li>
+            <li>RAG / 混合检索</li>
+            <li>Embedding / 向量索引</li>
+            <li>pgvector / RRF</li>
+            <li>上下文压缩 / 记忆管理</li>
+            <li>人工复核 / 暂停恢复</li>
+            <li>引用溯源 / 检索评估</li>
+            <li>多模态 / OCR / PDF 解析</li>
+            <li>Python / FastAPI</li>
+            <li>Pydantic / JSON Schema</li>
             <li>C++11 / 14 / 17</li>
             <li>C++20 了解</li>
-            <li>封装 / 继承 / 多态</li>
-            <li>lambda</li>
-            <li>右值引用</li>
-            <li>移动语义</li>
-            <li>emplace</li>
-            <li>底层系统</li>
+            <li>面向对象 / 移动语义</li>
             <li>数据结构与算法</li>
-            <li>链表 / 哈希 / 堆 / 树 / 跳表</li>
-            <li>Linux 网络编程</li>
+            <li>Linux / Socket / epoll</li>
+            <li>TCP/IP / 多路复用</li>
             <li>eBPF</li>
-            <li>Socket</li>
-            <li>select / poll / epoll</li>
-            <li>多路复用</li>
-            <li>TCP/IP</li>
-            <li>TCP 三次握手</li>
-            <li>四次挥手</li>
-            <li>流量控制</li>
-            <li>拥塞控制</li>
             <li>RPC / gRPC</li>
-            <li>Raft</li>
-            <li>分布式 KV 存储</li>
-            <li>CMake</li>
-            <li>Git</li>
-            <li>MySQL</li>
-            <li>SQL</li>
-            <li>索引原理</li>
-            <li>事务 / 锁机制</li>
-            <li>Python</li>
-            <li>RAG</li>
-            <li>LangChain</li>
-            <li>OCR / PDF 解析</li>
-            <li>Cursor / Codex</li>
-            <li>AI 辅助编程</li>
-            <li>Debug</li>
+            <li>Raft / 分布式 KV</li>
+            <li>多线程 / 并发控制</li>
+            <li>MySQL / PostgreSQL</li>
+            <li>索引 / 事务 / 锁机制</li>
+            <li>SSE / 运行追踪</li>
+            <li>CMake / Git / Docker</li>
+            <li>pytest / Playwright</li>
+            <li>Cursor / Codex / AI 辅助开发</li>
           </ul>
         </section>
 
